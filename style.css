@@ -1,0 +1,200 @@
+body {
+  font-family: "Intel One Mono", monospace;
+  background-image: radial-gradient(lightgrey 1.3px, Whitesmoke 1.3px);
+  background-size: 20px 20px;
+}
+.hr-line {
+  border-top: 1px solid transparent;
+  background: linear-gradient(white, white) padding-box,
+    linear-gradient(90deg, White, DimGrey, White) border-box;
+}
+p {
+  word-spacing: -4px;
+  -webkit-hyphens: auto;
+  -moz-hyphens: auto;
+  -ms-hyphens: auto;
+  hyphens: auto;
+}
+.observer-container {
+  container-name: main-container;
+  container-type: inline-size;
+}
+.img-layer-container {
+  width: 100%;
+  max-width: 500px;
+  min-width: 300px;
+  aspect-ratio: 1 / 1;
+  position: relative;
+  border: 8px solid White;
+  box-shadow: 0px 10px 20px Lightgrey;
+  -webkit-user-select: none;
+  user-select: none;
+}
+.img-layer {
+  width: 100%;
+  aspect-ratio: 1 / 1;
+  position: absolute;
+  -webkit-user-select: none;
+  user-select: none;
+  transition: opacity 0.8s ease;
+}
+.magnifier {
+  aspect-ratio: 1 / 1;
+  position: absolute;
+  border-radius: 100%;
+  box-shadow: 0 0 0 7px rgba(255, 255, 255, 0.85),
+    0 0 7px 7px rgba(0, 0, 0, 0.25), inset 0 0 40px 2px rgba(0, 0, 0, 0.25);
+  cursor: zoom-in;
+  transition: scale 0.4s ease, opacity 0.8s ease;
+  -webkit-user-select: none;
+  user-select: none;
+}
+.magnify:not(:hover) .magnifier {
+  opacity: 0;
+  scale: 0;
+}
+.magnify-btn {
+  font-size: 1.2rem;
+  color: Black;
+  background-color: Whitesmoke;
+  border: 1.5px solid Black;
+  padding: 8px 20px;
+}
+.active {
+  border-color: Dodgerblue;
+  color: Dodgerblue;
+}
+.selection {
+  padding: 6px 10px;
+  cursor: pointer;
+  border: 1px solid White;
+  color: Black;
+  background-color: White;
+  &:hover {
+    background-color: Aliceblue;
+  }
+}
+.layers-container .selection {
+  width: 160px;
+}
+.overlays-container .selection {
+  width: 240px;
+}
+#img-bg {
+  width: 100%;
+  background-image: url("https://assets.codepen.io/9400490/model-background.svg");
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+  z-index: -1;
+  filter: blur(4px);
+}
+#skin-layer {
+  opacity: 1;
+}
+#organs-layer {
+  opacity: 0;
+}
+#muscles-layer {
+  opacity: 0;
+}
+#veins-layer {
+  opacity: 0;
+}
+#bones-layer {
+  opacity: 0;
+}
+.semi-circle-left {
+  width: 20px;
+  height: 40px;
+  display: inline-block;
+  border-radius: 40px 0px 0px 40px;
+  border-right: 2px solid White;
+  background-repeat: no-repeat;
+  background-size: cover;
+  transform-origin: 100% 50%;
+  rotate: 35deg;
+}
+.semi-circle-right {
+  width: 20px;
+  height: 40px;
+  display: inline-block;
+  border-radius: 0px 40px 40px 0;
+  background-repeat: no-repeat;
+  background-size: cover;
+  transform-origin: 0% 50%;
+  rotate: 35deg;
+}
+.full-circle {
+  width: 40px;
+  aspect-ratio: 1 / 1;
+  display: inline-block;
+  border-radius: 50%;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+.selected {
+  color: Dodgerblue;
+  border: 1px solid Dodgerblue;
+}
+.skin-texture {
+  background-image: url("https://assets.codepen.io/9400490/skin_texture.jpg");
+  background-size: 100px;
+  background-position: left;
+}
+.muscle-texture {
+  background-image: url("https://assets.codepen.io/9400490/muscle_texture.jpg");
+  background-size: 100px;
+}
+.veins-texture {
+  background-image: url("https://assets.codepen.io/9400490/veins_texture.jpg");
+  background-size: 100px;
+  background-position: 60% 20%;
+}
+.bone-texture {
+  background-image: url("https://assets.codepen.io/9400490/bone_texture.jpg");
+  background-size: 100px;
+}
+.organ-texture {
+  background-image: url("https://assets.codepen.io/9400490/organ_texture.jpg");
+  background-size: 40px;
+}
+@container main-container (width > 460px) {
+  .main-container {
+    flex-direction: row;
+  }
+  .selection-container {
+    flex-direction: row;
+  }
+  .layers-container {
+    max-width: 220px;
+  }
+  .overlays-container {
+    width: 240px;
+  }
+}
+@container main-container (width < 460px) {
+  .main-container {
+    flex-direction: column;
+  }
+  .selection-container {
+    flex-direction: column;
+  }
+  .layers-container {
+    max-width: 220px;
+  }
+  .overlays-container {
+    width: 240px;
+    margin-top: 20px;
+  }
+}
+@container main-container (width < 400px) {
+  .magnifier {
+    width: 140px;
+  }
+}
+@container main-container (width > 400px) {
+  .magnifier {
+    width: 200px;
+  }
+}

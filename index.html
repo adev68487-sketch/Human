@@ -1,0 +1,86 @@
+<h2 class="fw-bold text-center mt-4 mb-4">
+  <i class="fa-solid fa-skull"></i>
+  Human Anatomy
+</h2>
+<p class="fs-5 ps-5 pe-5 m-0">Human anatomy is primarily the scientific study of the morphology of the human body. Gross anatomy (also called macroscopic anatomy, topographical anatomy, regional anatomy, or anthropotomy) is the study of anatomical structures that can be seen by the naked eye.<br><br>Toggle through different layers and overlays to see different biological systems the human body consists of. Finally, use the 'Magnifier' tool to get a close-up look of individual body parts.</p>
+<div class="d-flex justify-content-center">
+  <button class="magnify-btn mt-5 mb-5 fw-bold active"><i class="fa-solid fa-magnifying-glass me-2 fa-md"></i>Magnifier</button>
+</div>
+<div class="observer-container mb-5">
+  <div class="main-container d-flex flex-wrap align-items-center justify-content-center gap-3">
+    <div class="img-layer-container magnify">
+      <div class="img-layer" id="img-bg" src="https://assets.codepen.io/9400490/model-background.svg"></div>
+      <img class="img-layer" id="bones-layer" src="https://assets.codepen.io/9400490/Body-bones.png" alt="Bones" />
+      <img class="img-layer" id="veins-layer" src="https://assets.codepen.io/9400490/Body-veins.png" alt="Veins" />
+      <img class="img-layer" id="muscles-layer" src="https://assets.codepen.io/9400490/Body-muscles.png" alt="Muscles" />
+      <img class="img-layer" id="organs-layer" src="https://assets.codepen.io/9400490/Body-organs.png" alt="Organs" />
+      <img class="img-layer" id="skin-layer" src="https://assets.codepen.io/9400490/Body-skin.png" alt="Skin" />
+      <div class="magnifier"></div>
+    </div>
+    <div class="selection-container d-flex">
+      <div class="layers-container p-3">
+        <p class="fw-bold text-center fs-4">Layers</p>
+        <hr>
+        <div class="d-flex flex-row flex-wrap justify-content-center gap-3 mt-4">
+          <button class="selection d-flex flex-row align-items-center selected" id="skin" type="button">
+            <div class="full-circle skin-texture"></div>
+            <p class="m-0 ms-3 fw-bold">Skin</p>
+          </button>
+          <button class="selection d-flex flex-row align-items-center" id="muscle" type="button">
+            <div class="full-circle muscle-texture"></div>
+            <p class="m-0 ms-3 fw-bold">Muscles</p>
+          </button>
+          <button class="selection d-flex flex-row align-items-center" id="bone" type="button">
+            <div class="full-circle bone-texture"></div>
+            <p class="m-0 ms-3 fw-bold">Bones</p>
+          </button>
+          <button class="selection d-flex flex-row align-items-center" id="vein" type="button">
+            <div class="full-circle veins-texture"></div>
+            <p class="m-0 ms-3 fw-bold">Veins</p>
+          </button>
+          <button class="selection d-flex flex-row align-items-center" id="organ" type="button">
+            <div class="full-circle organ-texture"></div>
+            <p class="m-0 ms-3 fw-bold">Organs</p>
+          </button>
+        </div>
+      </div>
+      <div class="overlays-container p-3">
+        <p class="fw-bold text-center fs-4">Overlays</p>
+        <hr>
+        <div class="d-flex flex-row flex-wrap justify-content-center gap-3 mt-4">
+          <button class="selection d-flex flex-row align-items-center" id="skin-muscle" type="button">
+            <div class="semi-circle-left skin-texture"></div>
+            <div class="semi-circle-right muscle-texture"></div>
+            <p class="m-0 ms-3 fw-bold">Skin/Muscles</p>
+          </button>
+          <button class="selection d-flex flex-row align-items-center" id="muscle-bone" type="button">
+            <div class="semi-circle-left muscle-texture"></div>
+            <div class="semi-circle-right bone-texture"></div>
+            <p class="m-0 ms-3 fw-bold">Muscles/Bones</p>
+          </button>
+          <button class="selection d-flex flex-row align-items-center" id="skin-bone" type="button">
+            <div class="semi-circle-left skin-texture"></div>
+            <div class="semi-circle-right bone-texture"></div>
+            <p class="m-0 ms-3 fw-bold">Skin/Bones</p>
+          </button>
+          <button class="selection d-flex flex-row align-items-center" id="bone-vein" type="button">
+            <div class="semi-circle-left bone-texture"></div>
+            <div class="semi-circle-right veins-texture"></div>
+            <p class="m-0 ms-3 fw-bold">Bones/Veins</p>
+          </button>
+          <button class="selection d-flex flex-row align-items-center" id="skin-organ" type="button">
+            <div class="semi-circle-left skin-texture"></div>
+            <div class="semi-circle-right organ-texture"></div>
+            <p class="m-0 ms-3 fw-bold">Skin/Organs</p>
+          </button>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+<div class="hr-line mt-5 mb-4"></div>
+<p class="footer fs-6 fw-bold text-center text-muted">Powered by:</p>
+<p class="text-center">
+  <a title="Bootstrap" aria-label="More information about Bootstrap" href="https://getbootstrap.com" target="_blank"><img src="https://assets.codepen.io/9400490/Bootstrap.svg" alt="Bootstrap" width="30" height="30"></a>
+  <a title="Atomedge" aria-label="More information about Atomedge" href="https://www.atomedge.com" target="_blank"><img src="https://assets.codepen.io/9400490/Atomedge-2.svg" alt="Atomedge" width="30" height="30"></a>
+</p>
